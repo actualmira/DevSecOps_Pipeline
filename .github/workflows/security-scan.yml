@@ -3,8 +3,48 @@ name: Security Scanning
 on:
   push:
     branches: [ main ]
+    paths:
+      # JavaScript and TypeScript
+      - '**.js'
+      - '**.ts'
+      - '**.jsx'
+      - '**.tsx'
+      # Frontend templates and styles
+      - '**.html'
+      - '**.scss'
+      - '**.sass'
+      - '**.css'
+      - '**.pug'
+      # Smart contracts
+      - '**.sol'
+      # Dependencies
+      - 'package.json'
+      - 'package-lock.json'
+      # Source directories
+      - 'routes/**'
+      - 'models/**'
+      - 'lib/**'
+      - 'frontend/**'
+      - 'data/**'
+      # Configuration files
+      - 'Dockerfile'
+      - 'server.ts'
+      - 'tsconfig.json'
   pull_request:
     branches: [ main ]
+    paths:
+      - '**.js'
+      - '**.ts'
+      - '**.jsx'
+      - '**.tsx'
+      - '**.html'
+      - '**.scss'
+      - '**.sass'
+      - '**.css'
+      - '**.pug'
+      - '**.sol'
+      - 'package.json'
+      - 'package-lock.json'
   workflow_dispatch:
 
 jobs:
