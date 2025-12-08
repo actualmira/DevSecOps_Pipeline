@@ -1,0 +1,71 @@
+name: Security Scanning
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  sca-scan:
+    name: SCA - Dependency Scanning
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install --ignore-scripts
+      
+      - name: Install Snyk CLI
+        run: npm install -g snyk
+      
+      - name: Run Snyk SCA scan
+        continue-on-error: true
+        run: snyk test --json | tee sca-results.json
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
+      - name: Upload SCA results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sca-scan-results
+          path: sca-results.json
+
+  sast-scan:
+    name: SAST - Code Scanning
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install --ignore-scripts
+      
+      - name: Install Snyk CLI
+        run: npm install -g snyk
+      
+      - name: Run Snyk SAST scan
+        continue-on-error: true
+        run: snyk code test --json | tee sast-results.json
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
+      - name: Upload SAST results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sast-scan-results
+          path: sast-results.json
