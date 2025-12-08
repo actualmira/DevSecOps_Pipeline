@@ -1,0 +1,19 @@
+name: Test Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Say hello
+        run: echo "Hello from GitHub Actions!"
+      
+      - name: Check Node.js version
+        run: node --version
