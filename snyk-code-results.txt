@@ -1,0 +1,1359 @@
+
+Testing /home/mira/siem/juice-shop ...
+
+Open Issues
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: a144b380-f04d-41ed-8638-b75b906380c2
+   Path: test/api/quantityApiSpec.ts, line 21
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 676d23bb-62bf-4e38-bf1c-0f0b6d83f3d3
+   Path: test/api/quantityApiSpec.ts, line 55
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 12407a9f-ecfc-4752-81b5-7dfa60db728e
+   Path: routes/profileImageUrlUpload.ts, line 28
+   Info: The type of this object, coming from body and the value of its split property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Hardcoded Secret
+   Finding ID: 53d3be1b-40f8-4dab-8629-db88667bfd84
+   Path: test/api/2faSpec.ts, line 154
+   Info: Hardcoded value is used as a cipher key (in jsonwebtoken.default.sign). Generate the value with a cryptographically strong random number generator and do not hardcode it in source code.
+
+ ✗ [LOW] Cleartext Transmission - HTTP Instead of HTTPS
+   Finding ID: 20bdb078-74ad-4f48-9e70-96341b559074
+   Path: test/api/productReviewApiSpec.ts, line 69
+   Info: node:http.default.get uses HTTP which is an insecure protocol and should not be used in code due to cleartext transmission of information. Data in cleartext in a communication channel can be sniffed by unauthorized actors. Consider using the https module instead.
+
+ ✗ [LOW] Cleartext Transmission - HTTP Instead of HTTPS
+   Finding ID: fe66fdd5-a312-499b-a086-e4065767d5b1
+   Path: test/server/webhookSpec.ts, line 38
+   Info: node:http.default.createServer uses HTTP which is an insecure protocol and should not be used in code due to cleartext transmission of information. Data in cleartext in a communication channel can be sniffed by unauthorized actors. Consider using the https module instead.
+
+ ✗ [LOW] Use of Password Hash With Insufficient Computational Effort
+   Finding ID: a55e0773-1788-4c78-b0d2-eb54f19cc3e0
+   Path: Gruntfile.js, line 77
+   Info: node:crypto.createHash hash (used in node:crypto.createHash) is insecure. Consider changing it to a secure hashing algorithm.
+
+ ✗ [LOW] Use of Password Hash With Insufficient Computational Effort
+   Finding ID: 289f41f6-316c-4edb-bd85-ba441c24b9dc
+   Path: lib/insecurity.ts, line 43
+   Info: node:crypto.default.createHash hash (used in node:crypto.default.createHash) is insecure. Consider changing it to a secure hashing algorithm.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 90f5bc99-b66e-43ad-92bf-82a2ab0e379e
+   Path: test/cypress/e2e/administration.spec.ts, line 4
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 0b314cb4-1f37-4e57-840b-109693ec1b80
+   Path: test/cypress/e2e/b2bOrder.spec.ts, line 6
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 01782202-006c-45fc-884c-dd2b923f1b5d
+   Path: test/cypress/e2e/b2bOrder.spec.ts, line 37
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 72c19b22-7336-4aec-9230-20f228184718
+   Path: test/cypress/e2e/basket.spec.ts, line 4
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 63692448-98f5-40b2-bf1f-490fa79c3987
+   Path: test/cypress/e2e/changePassword.spec.ts, line 5
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: b79b187d-5031-4e7b-abe5-d83df3ad9f00
+   Path: test/cypress/e2e/changePassword.spec.ts, line 24
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: f82f1d6a-443b-4fec-a20b-8e800642b142
+   Path: test/cypress/e2e/changePassword.spec.ts, line 31
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: e77e4bea-2c30-4263-b817-9576a1a69a85
+   Path: test/cypress/e2e/chatbot.spec.ts, line 3
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: a7d00bf5-668c-4c79-96e2-89d0482e8d67
+   Path: test/cypress/e2e/complain.spec.ts, line 4
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 9ab72abe-aca0-4140-8d4b-81075f31f834
+   Path: test/cypress/e2e/contact.spec.ts, line 11
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 7780f2da-f48a-4bd0-9dd7-94680806457d
+   Path: test/cypress/e2e/contact.spec.ts, line 47
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 974a868b-92b8-40a4-ab74-c2d90aa3534c
+   Path: test/cypress/e2e/dataErasure.spec.ts, line 3
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: ebf3dce5-84a0-4f72-b4f5-5193dba6114e
+   Path: test/cypress/e2e/dataExport.spec.ts, line 24
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 5b631af9-3da1-4892-8313-bd10c27ab146
+   Path: test/cypress/e2e/noSql.spec.ts, line 8
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: d504bf43-4cbe-43ed-af3c-9496d6ac9ab1
+   Path: test/cypress/e2e/noSql.spec.ts, line 53
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 61e9f4d0-6c9c-4a61-ab4c-b00d53764f6b
+   Path: test/cypress/e2e/noSql.spec.ts, line 76
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: d0d243c0-13d0-495f-8c5c-8cc52dec344a
+   Path: test/cypress/e2e/noSql.spec.ts, line 120
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: f32738ee-a461-4a13-a18d-62a27afd492b
+   Path: test/cypress/e2e/profile.spec.ts, line 3
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: e791b866-9182-47d9-bf58-40a17030e00c
+   Path: test/cypress/e2e/register.spec.ts, line 9
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: ee9d9c1e-31e2-4a04-a696-2686345f6b51
+   Path: test/cypress/e2e/restApi.spec.ts, line 4
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 6eb810ca-e199-4629-83ff-3f2290b9f7c6
+   Path: test/cypress/e2e/restApi.spec.ts, line 81
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 3740da0d-497b-4825-bd17-5e6434958659
+   Path: test/cypress/e2e/search.spec.ts, line 55
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: 91adf62a-1631-4ac5-b9ec-c2a44e34b48e
+   Path: test/cypress/e2e/search.spec.ts, line 82
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Use of Hardcoded Credentials
+   Finding ID: f0c0f570-f2f3-4c97-81c5-e75c229981c1
+   Path: test/cypress/e2e/totpSetup.spec.ts, line 5
+   Info: Do not hardcode credentials in code. Found hardcoded credential used in login.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 3683f805-5c3c-4995-9283-98b8c08cb18d
+   Path: routes/vulnCodeSnippet.ts, line 63
+   Info: The type of this object, coming from body and the value of its length property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: a94c56d0-5c04-4161-8b50-1006d8fd7dd8
+   Path: server.ts, line 404
+   Info: The type of this object, coming from body and the value of its length property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 2c4a908a-28b8-4ccb-a465-d9dbe96d6e01
+   Path: test/server/verifySpec.ts, line 309
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 21cb1f45-1e16-4667-8523-e9670405403d
+   Path: test/server/verifySpec.ts, line 297
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 3b4cb3a9-d04f-4bf3-9ae1-983b1664ae08
+   Path: test/server/verifySpec.ts, line 275
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: db8adaeb-cb19-4f5b-8585-341dcf58dbe6
+   Path: test/server/verifySpec.ts, line 263
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 12c94015-695b-4a3b-b609-a498634acb8a
+   Path: server.ts, line 404
+   Info: The type of this object, coming from body and the value of its length property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 0cdb0416-6ecd-4195-8c92-379cb40973e2
+   Path: test/api/2faSpec.ts, line 20
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 0ca84431-dbdc-47fe-b995-fe5a54d28f24
+   Path: test/api/2faSpec.ts, line 174
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: c379cacc-cb24-4bab-8c8f-59a020dc3a44
+   Path: test/api/2faSpec.ts, line 200
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 053cab02-c051-4918-bb66-187346b4dfa9
+   Path: test/api/2faSpec.ts, line 236
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: cf67242b-9880-45ff-96a0-a6db1d8d526f
+   Path: test/api/2faSpec.ts, line 282
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: e5179424-0e58-477f-86d7-7a6d7c551d04
+   Path: test/api/2faSpec.ts, line 311
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 25488a87-34f7-4a4b-9686-f0e0d043c598
+   Path: test/api/2faSpec.ts, line 340
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: cf70b9d2-ad26-4913-9e36-2ae9d2228233
+   Path: test/api/2faSpec.ts, line 369
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 1d352fbc-59e1-41e8-91cf-0dc2392569f2
+   Path: test/api/2faSpec.ts, line 398
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 22bf5477-f126-49e2-8ba1-793e0d7837be
+   Path: test/api/2faSpec.ts, line 435
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 52f2e73f-7e20-49e8-a066-b3f1fe0d2428
+   Path: test/api/addressApiSpec.ts, line 20
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: a2fce153-cc77-48ce-8311-4cb3613465b7
+   Path: test/api/authenticatedUsersSpec.ts, line 21
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 76d8f6e3-3815-4097-bb21-9d9f3de0d213
+   Path: test/api/authenticatedUsersSpec.ts, line 30
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: b0a9fdf5-c844-4105-916e-4aac44ffaa1e
+   Path: test/api/basketApiSpec.ts, line 25
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: d229ece6-649d-471b-a156-0e91791d6804
+   Path: test/api/basketApiSpec.ts, line 101
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 82107cc1-9675-40da-b397-9c69644385e0
+   Path: test/api/basketItemApiSpec.ts, line 21
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 30b3345c-a611-4c0f-a375-5e5bdee9498d
+   Path: test/api/chatBotSpec.ts, line 18
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: d7cca5a8-b86b-4e4c-9b49-5116a374c7df
+   Path: test/api/chatBotSpec.ts, line 56
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 280b3983-3836-4067-8e89-78b54d743334
+   Path: test/api/chatBotSpec.ts, line 77
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 4437b705-eead-465f-bc08-b5d8a8692b74
+   Path: test/api/chatBotSpec.ts, line 108
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 76b03ab3-7c55-4242-9f50-ed19b17ae83f
+   Path: test/api/chatBotSpec.ts, line 140
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2f5024af-f394-403d-826d-4b2d18fa4415
+   Path: test/api/chatBotSpec.ts, line 174
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 185282f1-e99f-43e4-8170-3188322c04a4
+   Path: test/api/chatBotSpec.ts, line 205
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: e27f784b-3e5e-43cd-a3d5-7118224e46e3
+   Path: test/api/chatBotSpec.ts, line 250
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 8a7cbde4-40d9-4336-bf10-e75a1538ea1c
+   Path: test/api/quantityApiSpec.ts, line 38
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 70661f9e-ac6a-4f89-9b11-d53020b37592
+   Path: test/api/chatBotSpec.ts, line 295
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 05683cb1-577a-4b7b-8ad5-a95ca3ebf4e8
+   Path: test/api/dataExportApiSpec.ts, line 21
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 1856b375-4ecf-400d-b5a7-9678d8492589
+   Path: test/api/dataExportApiSpec.ts, line 48
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: eb98dbad-9636-45c2-af44-6425dea6b73b
+   Path: test/api/dataExportApiSpec.ts, line 77
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: e1273e90-d64c-472c-955c-97984f115a88
+   Path: test/api/dataExportApiSpec.ts, line 112
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 9eadc420-cd7d-4b0c-892a-86b7d8960723
+   Path: test/api/dataExportApiSpec.ts, line 152
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 5d25dd1c-8322-4fbc-8adc-5421792c73ab
+   Path: test/api/dataExportApiSpec.ts, line 194
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 4cdd4e7a-bfed-4327-96df-e8f974cf32e6
+   Path: test/api/dataExportApiSpec.ts, line 234
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 5292bd30-7c1f-4bf6-958f-7612166dcb5f
+   Path: test/api/dataExportApiSpec.ts, line 282
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ea9c76f7-0262-48f8-a3c2-0ca4cf8d7b68
+   Path: test/api/dataExportApiSpec.ts, line 332
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: c380ab11-0f2a-47f7-aa0b-ac4b2e4d6118
+   Path: test/api/deliveryApiSpec.ts, line 23
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 5903336d-c9a5-4581-b23d-ece34cf70154
+   Path: test/api/deliveryApiSpec.ts, line 52
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 1d0508e7-e40a-400e-8b15-66297a1f5cee
+   Path: test/api/deliveryApiSpec.ts, line 83
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: f485b4fe-fa51-4d3c-88ec-18007bf7dd61
+   Path: test/api/deliveryApiSpec.ts, line 111
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 94008c95-e861-4aa4-9fc7-8fc4dc41713f
+   Path: test/api/deluxeApiSpec.ts, line 13
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 21b80896-54cf-417b-a731-406e70f0d450
+   Path: test/api/deluxeApiSpec.ts, line 35
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: eb532880-dcc4-4186-b775-47666ccf4186
+   Path: test/api/deluxeApiSpec.ts, line 53
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 4d1c5a11-fa1c-4387-8a7e-533b48c4f046
+   Path: test/api/deluxeApiSpec.ts, line 71
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: c7a52619-f2ad-4dba-b425-56fb876a22cc
+   Path: test/api/deluxeApiSpec.ts, line 89
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: f0d43cff-df24-4de7-a06b-005f29b4c9a7
+   Path: test/api/deluxeApiSpec.ts, line 105
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: dfa9caa6-e7e3-4189-b6a8-1a688f83ee66
+   Path: test/api/deluxeApiSpec.ts, line 129
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: a6f821f6-e9c9-4afb-909c-3654a84bc783
+   Path: test/api/deluxeApiSpec.ts, line 149
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 92acdc35-2971-4c06-8892-32321e98aafb
+   Path: test/api/deluxeApiSpec.ts, line 170
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ce121fb0-69dd-4774-a0b3-034fff8679be
+   Path: test/api/deluxeApiSpec.ts, line 191
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 50d0fbd0-fa27-4655-b99c-313826599e7f
+   Path: test/api/erasureRequestApiSpec.ts, line 18
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 755d222a-65e0-49a8-a36c-f88507711b39
+   Path: test/api/erasureRequestApiSpec.ts, line 37
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ac3831f8-b345-41d0-a8af-142d04e9cdd6
+   Path: test/api/erasureRequestApiSpec.ts, line 64
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 40510c5f-ba92-4fe7-9e93-873a2441bb4d
+   Path: test/api/erasureRequestApiSpec.ts, line 80
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: da4294bb-6002-4efc-87de-d7cb6add9810
+   Path: test/api/erasureRequestApiSpec.ts, line 99
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 4be1f3e6-ae58-466f-ae45-75b4c2a46b18
+   Path: test/api/erasureRequestApiSpec.ts, line 119
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ad44f22c-27dd-4507-bf30-0cd27561e2ca
+   Path: test/api/erasureRequestApiSpec.ts, line 140
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 3e5b9453-5f5e-4ddf-8300-2612ad9d47b0
+   Path: test/api/feedbackApiSpec.ts, line 120
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 7481401c-206c-41b0-961b-7af81cde7bfb
+   Path: test/api/feedbackApiSpec.ts, line 153
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: cebc535e-3430-4d38-b023-1218e097d7db
+   Path: test/api/loginApiSpec.ts, line 21
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: a75b477a-a2b3-42e7-a55f-d7e55640ea95
+   Path: test/api/loginApiSpec.ts, line 30
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 4be9361e-335d-4729-acd4-97885e94ee2f
+   Path: test/api/loginApiSpec.ts, line 46
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: bafcf706-1630-4e98-85c7-d102a9239c8b
+   Path: test/api/loginApiSpec.ts, line 64
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 410d2f5a-2b92-4fae-98de-0ab1c635d87a
+   Path: test/api/loginApiSpec.ts, line 79
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: cba53664-7a5e-4f81-b9b9-3a0973eccad7
+   Path: test/api/loginApiSpec.ts, line 94
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 74b42588-fa56-48e2-b6f1-e44a296ebf2b
+   Path: test/api/loginApiSpec.ts, line 109
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 4eda2fe1-ca6b-4e10-a6c7-dc16d7c0266e
+   Path: test/api/loginApiSpec.ts, line 124
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: af4669aa-f8ff-4ce1-9e88-bbc3ac28a28c
+   Path: test/api/loginApiSpec.ts, line 142
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 6a7beabe-9d75-4f77-98e6-3a467a72f75b
+   Path: test/api/loginApiSpec.ts, line 245
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 53f570ca-40ca-4809-ab08-2ba3c9bd0291
+   Path: test/api/loginApiSpec.ts, line 266
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ef5d6e42-e4cb-4f15-877e-8076dd2a96ae
+   Path: test/api/memoryApiSpec.ts, line 26
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 9f7f845a-7e41-4d95-a9ae-63c6d669ce4d
+   Path: test/api/memoryApiSpec.ts, line 64
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2a552a41-8416-4493-a235-385d978db3ae
+   Path: test/api/memoryApiSpec.ts, line 86
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: e0fe3f9e-0389-489c-a9d5-29a85f96a50a
+   Path: test/api/memoryApiSpec.ts, line 112
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 13b46210-8fe5-4277-b475-93f5dcc6cad9
+   Path: test/api/memoryApiSpec.ts, line 142
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 0311ec25-e3a5-4e1d-9b84-3924d5635950
+   Path: test/api/orderHistoryApiSpec.ts, line 19
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 0b71dfbd-8085-4f3b-96c0-707accb1f71d
+   Path: test/api/orderHistoryApiSpec.ts, line 56
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 85a44443-ad39-42fe-927e-06f0f8bdcb40
+   Path: test/api/orderHistoryApiSpec.ts, line 73
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 5cc14701-7fde-416a-9cf4-fef0f713d178
+   Path: test/api/orderHistoryApiSpec.ts, line 90
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: efcf2aac-5d1f-423b-bc35-b11e3ee89541
+   Path: test/api/orderHistoryApiSpec.ts, line 109
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2bb43fb9-91ff-495f-9fb5-7f493b53418f
+   Path: test/api/orderHistoryApiSpec.ts, line 129
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: a45261f8-ed94-4b32-a407-34a6a29577dd
+   Path: test/api/orderHistoryApiSpec.ts, line 149
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 3a4777f8-936f-4aec-9f98-38325e575d61
+   Path: test/api/passwordApiSpec.ts, line 20
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 8becc693-c12a-4f78-9492-0c2e0115ccd1
+   Path: test/api/passwordApiSpec.ts, line 29
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 951c330b-9a06-4713-8890-ab8f4cb92594
+   Path: test/api/passwordApiSpec.ts, line 47
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2910502b-eb10-42e1-8aaf-b992f5aa3e0f
+   Path: test/api/passwordApiSpec.ts, line 93
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2f824d7f-c119-4fd6-93e7-b0bd70b61d06
+   Path: test/api/paymentApiSpec.ts, line 20
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: cd8f0f6e-560f-4134-8a99-74aaf56fb5f5
+   Path: test/api/productReviewApiSpec.ts, line 112
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2543544a-4fe8-4d90-bd40-6e8ad4e97485
+   Path: test/api/productReviewApiSpec.ts, line 132
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 6b1a3850-84ad-4d19-9657-30158e1c93f6
+   Path: routes/profileImageUrlUpload.ts, line 20
+   Info: The type of this object, coming from body and the value of its match property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: f94295e5-206b-4608-bf38-a43bc1b175ef
+   Path: test/api/profileImageUploadSpec.ts, line 52
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: a92bd287-5488-47ff-b53d-14e9945cb180
+   Path: test/api/profileImageUploadSpec.ts, line 97
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 05ece389-b3dc-4488-876f-f2a135e96cff
+   Path: test/api/profileImageUploadSpec.ts, line 123
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: b4f4902b-fa3c-469d-a39e-5ba255469920
+   Path: test/api/profileImageUploadSpec.ts, line 164
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: b03f0d86-a53e-4c4f-8e25-879faeef27b7
+   Path: test/api/profileImageUploadSpec.ts, line 25
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 434c809e-fcf1-4de9-b01e-7ff1710c7875
+   Path: routes/profileImageUrlUpload.ts, line 28
+   Info: The type of this object, coming from body and the value of its split property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2023abf5-d02d-4f4b-a569-0db8550ccefa
+   Path: test/api/chatBotSpec.ts, line 287
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 8b152a6b-6380-483d-a63d-72816b779484
+   Path: test/api/quantityApiSpec.ts, line 72
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 889b3cf6-8339-4a6a-bb69-35b89fd4e19d
+   Path: test/api/quantityApiSpec.ts, line 93
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 63e4257c-c796-4974-9b2e-ef809b915d16
+   Path: test/api/quantityApiSpec.ts, line 114
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 7b589797-86dd-4748-b4f7-b8722bc16c57
+   Path: test/api/quantityApiSpec.ts, line 137
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: b6a7dad9-eaf1-4f13-8d47-8a86be97ea61
+   Path: test/api/quantityApiSpec.ts, line 155
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: c77bc456-0273-4914-8b0f-47a478c09f5c
+   Path: test/api/quantityApiSpec.ts, line 173
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 9a059ab2-7dbb-4fb2-ae82-548f23e5122e
+   Path: test/api/quantityApiSpec.ts, line 190
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 56872b54-8db9-4122-be91-bd1a25120f6f
+   Path: test/api/quantityApiSpec.ts, line 207
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 9f5a10c5-589b-4413-8f39-c2e4bfcc89d4
+   Path: test/api/quantityApiSpec.ts, line 228
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 97c0aade-559f-4135-b69c-17e2949ceaba
+   Path: test/api/quantityApiSpec.ts, line 249
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 16b1ce4d-cf84-4cad-a9b9-e741c622fa2a
+   Path: test/api/quantityApiSpec.ts, line 269
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 1dadebd6-ff05-4e2b-bed1-0bec19e4a4be
+   Path: test/api/quantityApiSpec.ts, line 292
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: f87d1996-dbc9-468e-80dc-ad48238b7d0d
+   Path: test/api/quantityApiSpec.ts, line 309
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 684d0ae4-6676-4239-978c-7641169c62f9
+   Path: test/api/quantityApiSpec.ts, line 326
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 99132275-063f-4874-be55-da5dfadc8274
+   Path: test/api/userApiSpec.ts, line 45
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ef159b68-3827-4351-9eea-8f3cc1909928
+   Path: test/api/userApiSpec.ts, line 63
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ab540ab0-160a-42d8-87a0-6852f640fd73
+   Path: test/api/userApiSpec.ts, line 139
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: c122a8b8-bb27-448f-a8ca-55c70e369bba
+   Path: test/api/userApiSpec.ts, line 161
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 2207e0a1-dd81-4f84-a6d7-f8b8a05adda2
+   Path: test/api/userApiSpec.ts, line 183
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 8f963a2e-da98-44a0-8c04-603d293b7f17
+   Path: test/api/userApiSpec.ts, line 202
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 151d17b7-59ab-4bb5-b79a-fcf15fb146ac
+   Path: test/api/userApiSpec.ts, line 256
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: cae4de3f-4e8d-4edf-9d2d-957dea38f335
+   Path: test/api/userProfileSpec.ts, line 19
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 9b5b972c-e652-4e1a-a1c3-be6ce790ad7a
+   Path: test/cypress/e2e/noSql.spec.ts, line 76
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: e7ce145e-e776-4a04-909e-3eec5edf0aac
+   Path: test/cypress/e2e/noSql.spec.ts, line 120
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: d9c2b87a-c678-4567-8bd3-38892c718cd3
+   Path: test/cypress/e2e/register.spec.ts, line 84
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: aef9b68e-8b13-4737-a7db-44f34dffca72
+   Path: test/cypress/e2e/administration.spec.ts, line 5
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 1f226ab3-93ad-4f0b-96f7-86aa96c7ed75
+   Path: test/cypress/e2e/b2bOrder.spec.ts, line 6
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: b31be6a7-6a3f-42d3-957d-558630f605af
+   Path: test/cypress/e2e/b2bOrder.spec.ts, line 37
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 7ef1ee70-71ae-4288-ae97-298fb657dc70
+   Path: test/cypress/e2e/basket.spec.ts, line 4
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 8dcf7d1d-34d7-4894-84d0-9b775c3b962f
+   Path: test/cypress/e2e/basket.spec.ts, line 76
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: d36c17df-26a7-43cf-aac0-9bba72b132a5
+   Path: test/cypress/e2e/changePassword.spec.ts, line 6
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: db608ab0-7f9c-490f-82be-1f8bc9225482
+   Path: test/cypress/e2e/changePassword.spec.ts, line 25
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 4d9a4d21-6061-4acd-8ef3-e0f6864c902a
+   Path: test/cypress/e2e/changePassword.spec.ts, line 31
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: c0a8ca22-357b-47c1-a127-b24dcf34bc6b
+   Path: test/cypress/e2e/chatbot.spec.ts, line 3
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 61ef8a26-fd9e-43f0-98d3-cb559cb96249
+   Path: test/cypress/e2e/complain.spec.ts, line 5
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 852cea62-d9a7-452b-99f5-c70e758cb473
+   Path: test/cypress/e2e/contact.spec.ts, line 11
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 7dcc0b90-7153-4276-bdd9-92533c37dac5
+   Path: test/cypress/e2e/contact.spec.ts, line 47
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: c206f9a2-cbcc-4ad9-bcf0-911e76d43331
+   Path: test/cypress/e2e/dataErasure.spec.ts, line 3
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: ae30db89-e758-4c05-9df8-8941ebc098cd
+   Path: test/cypress/e2e/dataExport.spec.ts, line 24
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 96e29971-000a-4744-bc3a-681484ee6544
+   Path: test/cypress/e2e/deluxe.spec.ts, line 4
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: a2610631-449f-460d-b360-fdfc0f00213e
+   Path: test/cypress/e2e/deluxe.spec.ts, line 21
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 1a391b8f-07d2-4204-b53c-c8ed3df79e04
+   Path: test/cypress/e2e/noSql.spec.ts, line 8
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: b333a763-e4ac-4d33-8014-753cd4cbb1a0
+   Path: test/cypress/e2e/noSql.spec.ts, line 53
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 100f011a-82ad-4d8c-9723-63f7ceb13298
+   Path: test/cypress/e2e/profile.spec.ts, line 3
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 8057a2d2-7566-47a4-a0f9-b90e77e3e2a3
+   Path: test/cypress/e2e/register.spec.ts, line 10
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 14bb6e25-aa81-4a35-ac07-5448bba3ef1b
+   Path: test/cypress/e2e/restApi.spec.ts, line 4
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 5c5d2ad0-ba89-43b3-b02d-3c1c19db4edf
+   Path: test/cypress/e2e/restApi.spec.ts, line 82
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: e3c68f27-ac3a-4173-80b1-bacf01e28962
+   Path: test/cypress/e2e/search.spec.ts, line 56
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 592026c9-0b4c-45a2-a672-f878777b065a
+   Path: test/cypress/e2e/search.spec.ts, line 83
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: e1338fc3-5714-4545-bd19-9b3c36e6d29a
+   Path: test/cypress/e2e/totpSetup.spec.ts, line 6
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: 70bb6ce0-113a-44d9-ae0b-bdff5d382012
+   Path: test/cypress/e2e/totpSetup.spec.ts, line 20
+   Info: Do not hardcode passwords in code. Found hardcoded password used in login.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 960d54fe-56ed-4d2f-a52a-2643617957b2
+   Path: test/server/currentUserSpec.ts, line 36
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: d68792ac-6fe2-4fe1-9836-d8c13d747014
+   Path: test/server/currentUserSpec.ts, line 33
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 0f8b232d-0cd4-42e6-becc-63fb2ce7697b
+   Path: test/cypress/e2e/totpSetup.spec.ts, line 7
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: bd13f119-019e-4428-a868-f7799e47641c
+   Path: test/cypress/e2e/forgedJwt.spec.ts, line 22
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: e61d749d-de22-4a92-9314-7c5b35757dc5
+   Path: test/cypress/e2e/forgedJwt.spec.ts, line 7
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: a0bcb083-9387-48a3-b046-08ec32c54c7b
+   Path: test/api/web3Spec.ts, line 60
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 836dbba4-3182-4ae7-8374-4022c0cc3a2d
+   Path: test/api/web3Spec.ts, line 48
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 1791363c-6f06-42f4-b8cc-40f2bf50bfe4
+   Path: test/api/web3Spec.ts, line 36
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 48195fec-be23-4184-8af3-4f35596f8c28
+   Path: test/api/web3Spec.ts, line 24
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 5415dc6d-e7a1-4915-92c8-076bba148203
+   Path: test/api/userApiSpec.ts, line 302
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 0bfe073b-0a8e-4dbd-ae8c-3a06dfb58c2a
+   Path: test/api/2faSpec.ts, line 439
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 3c1432ee-4d24-4d76-8657-378d06b26df7
+   Path: test/api/2faSpec.ts, line 438
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 855f91c7-9ac1-4e24-ae09-4bd7186e9ff1
+   Path: test/api/2faSpec.ts, line 436
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: a95e0c01-a636-450b-ae42-5633b5ae329f
+   Path: test/api/2faSpec.ts, line 402
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 2bff7fdd-1c73-4417-80e2-545207f206f5
+   Path: test/api/2faSpec.ts, line 401
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: da3d5d31-570b-4d13-8df4-296bff0e2d91
+   Path: test/api/2faSpec.ts, line 399
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: f1dbbf5b-e63f-4db6-b2b2-4af6c72b1f3f
+   Path: test/api/2faSpec.ts, line 385
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: cab15682-d9e8-43e4-9e33-9fef515c33bb
+   Path: test/api/2faSpec.ts, line 372
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 8e29925f-d37b-462d-850e-f819802eccde
+   Path: test/api/2faSpec.ts, line 370
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: fc289208-000e-41d4-874f-b82aadfa6e9b
+   Path: test/api/2faSpec.ts, line 358
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 3faf0627-246d-4633-bd4f-a736e4d9a846
+   Path: test/api/2faSpec.ts, line 342
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 9f6b611a-86a2-4edb-9f51-7b3abf70936c
+   Path: test/api/2faSpec.ts, line 329
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 70e91539-ed2c-4aec-824e-a0e0fc512ab6
+   Path: test/api/2faSpec.ts, line 313
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: c61e6cd2-9790-4c3b-ad70-c9516bf7289f
+   Path: test/api/2faSpec.ts, line 300
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: cf009b7c-2d74-4846-af45-e34c03f947e8
+   Path: test/api/2faSpec.ts, line 284
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 3019e887-d984-40c7-9829-d537e389e378
+   Path: test/api/2faSpec.ts, line 254
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 7705433c-6f2b-4a54-b7cb-fc324f5ec221
+   Path: routes/vulnCodeSnippet.ts, line 64
+   Info: The type of this object, coming from body and the value of its includes property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 65ba1c7e-7997-483a-89a8-2de902898fc1
+   Path: test/api/2faSpec.ts, line 238
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 8bdddc7b-16e1-4b97-aba2-6677ef2fa4c3
+   Path: test/api/2faSpec.ts, line 175
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: 44db98b9-8064-4033-8f4a-9bc50770bf58
+   Path: test/api/2faSpec.ts, line 78
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 299b3e1a-ca77-41ea-9f1e-d546be625e2d
+   Path: server.ts, line 407
+   Info: The type of this object, coming from body and the value of its trim property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 7bb72d94-8986-4f0a-80b0-b291ec7909dd
+   Path: server.ts, line 406
+   Info: The type of this object, coming from body and the value of its trim property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 4c6d83e4-fbd1-4d9f-a961-1b5177c096d4
+   Path: server.ts, line 405
+   Info: The type of this object, coming from body and the value of its trim property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [LOW] Improper Type Validation
+   Finding ID: 0b24f7a5-27a8-494c-ad30-1c1074df06c1
+   Path: routes/vulnCodeSnippet.ts, line 66
+   Info: The type of this object, coming from body and the value of its filter property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.
+
+ ✗ [MEDIUM] Cross-site Scripting (XSS)
+   Finding ID: 4a8f5bd9-43a6-48e2-aa7a-f67f438b0827
+   Path: frontend/src/app/last-login-ip/last-login-ip.component.ts, line 39
+   Info: Unsanitized input from browser storage flows into bypassSecurityTrustHtml, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).
+
+ ✗ [MEDIUM] Insecure JWT Verification Method
+   Finding ID: 9d1eac3d-c287-4288-ac77-97c05a238ca8
+   Path: routes/authenticatedUsers.ts, line 20
+   Info: A JWT decode() method is used that decodes the token but does not check its validity or integrity. If the JWT has originated from an untrusted source, decoded data could be crafted by an attacker and should not be considered safe to use or process within the application. Always use JWT verification methods to validate the structure and integrity of a token.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: 90b4c7f0-54f0-4aa7-9d26-f5cc2f8ae49e
+   Path: frontend/src/app/Services/two-factor-auth-service.spec.ts, line 65
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: b300e079-4fdb-4700-8cda-0e2263a05b55
+   Path: frontend/src/app/Services/two-factor-auth-service.spec.ts, line 81
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: 9f9af584-f451-4a73-81b4-04095c572fdb
+   Path: frontend/src/app/oauth/oauth.component.spec.ts, line 84
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [MEDIUM] Cross-Site Request Forgery (CSRF)
+   Finding ID: 4ebf3b50-f846-4690-be15-bda15b2dd806
+   Path: server.ts, line 129
+   Info: CSRF protection is disabled for your Express app. This allows the attackers to execute requests on a user's behalf.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: 62cce010-7966-444a-a5be-9eadbd1b9853
+   Path: frontend/src/app/oauth/oauth.component.spec.ts, line 91
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: 473f5241-a8dd-4d2c-be6a-89d4748b4497
+   Path: frontend/src/app/oauth/oauth.component.spec.ts, line 84
+   Info: Do not hardcode passwords in code. Found hardcoded password used in passwordRepeat.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 72d2e76a-4ee8-4155-9a23-753c0a06feba
+   Path: routes/dataErasure.ts, line 18
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 15ad257a-1dbe-4ae7-be94-84891c574d2e
+   Path: routes/dataErasure.ts, line 54
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: df5c71b5-febe-4f81-ad2c-8f5d9ef77d3e
+   Path: routes/easterEgg.ts, line 12
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 29a629c6-6029-4480-a620-351be1de8c57
+   Path: routes/languages.ts, line 11
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 0d456076-9cb0-4b51-a7ae-265bc9981375
+   Path: routes/premiumReward.ts, line 12
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 2b1d82a1-0fc9-4540-b54d-f420dbc0c510
+   Path: routes/privacyPolicyProof.ts, line 12
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: d40f5af9-9767-46f0-af85-162fda181d5b
+   Path: routes/profileImageUrlUpload.ts, line 17
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 7203e7ba-6e1c-49e2-bf47-4cea1ee92b03
+   Path: routes/videoHandler.ts, line 52
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Information Exposure - Server Error Message
+   Finding ID: 3ee719fa-8ea2-4c19-8558-eb41632257fc
+   Path: routes/errorHandler.ts, line 28
+   Info: An error object flows to send and is leaked to the attacker. This may disclose important information about the application to an attacker.
+
+ ✗ [MEDIUM] Prototype Pollution
+   Finding ID: 559c4797-2679-4db7-9905-fd8a90f9546c
+   Path: routes/vulnCodeSnippet.ts, line 110
+   Info: Unsanitized input from the HTTP request body flows into a member access and is used to access a property of this object by name. This may allow a malicious user to pollute the Object.prototype and cause a crash, remote code execution or logic bypasses.
+
+ ✗ [MEDIUM] Prototype Pollution
+   Finding ID: 86241b80-11b1-4c80-a6b7-50de6101c7f0
+   Path: routes/vulnCodeFixes.ts, line 92
+   Info: Unsanitized input from the HTTP request body flows into a member access and is used to access a property of this object by name. This may allow a malicious user to pollute the Object.prototype and cause a crash, remote code execution or logic bypasses.
+
+ ✗ [MEDIUM] Open Redirect
+   Finding ID: 3ee17549-16eb-41e5-9cf1-916f70d019e0
+   Path: routes/redirect.ts, line 19
+   Info: Unsanitized input from an HTTP parameter flows into redirect, where it is used as input for request redirection. This may result in an Open Redirect vulnerability.
+
+ ✗ [HIGH] Hardcoded Non-Cryptographic Secret
+   Finding ID: 8b81fd60-d179-4c8e-9b2f-24b04913fd7c
+   Path: lib/insecurity.ts, line 23
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [HIGH] SQL Injection
+   Finding ID: 6046d221-fff8-454b-87b3-6c0361af4250
+   Path: data/static/codefixes/unionSqlInjectionChallenge_1.ts, line 6
+   Info: Unsanitized input from an HTTP parameter flows into query, where it is used in an SQL query. This may result in an SQL Injection vulnerability.
+
+ ✗ [HIGH] Hardcoded Non-Cryptographic Secret
+   Finding ID: e3095271-aedc-49f3-ae34-5aa29b898309
+   Path: frontend/src/app/app.guard.spec.ts, line 38
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [HIGH] SQL Injection
+   Finding ID: 2e2ac297-36a7-4d96-bec5-df1bddde4a9b
+   Path: routes/search.ts, line 23
+   Info: Unsanitized input from an HTTP parameter flows into query, where it is used in an SQL query. This may result in an SQL Injection vulnerability.
+
+ ✗ [HIGH] Path Traversal
+   Finding ID: 4f81f427-e9dc-404a-aec6-14adb5322b09
+   Path: routes/profileImageUrlUpload.ts, line 29
+   Info: Unsanitized input from cookies flows into node:fs.default.createWriteStream, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write to arbitrary files.
+
+ ✗ [HIGH] NoSQL Injection
+   Finding ID: 781083c9-8e09-4c13-bd66-76975a487f95
+   Path: routes/updateProductReviews.ts, line 17
+   Info: Unsanitized input from the HTTP request body flows into update, where it is used in an NoSQL query. This may result in an NoSQL Injection vulnerability.
+
+ ✗ [HIGH] NoSQL Injection
+   Finding ID: 59a23018-b2d8-450a-ad89-9881845bf068
+   Path: routes/likeProductReviews.ts, line 50
+   Info: Unsanitized input from the HTTP request body flows into update, where it is used in an NoSQL query. This may result in an NoSQL Injection vulnerability.
+
+ ✗ [HIGH] NoSQL Injection
+   Finding ID: 1f647d7d-d10f-4ea0-9840-048dc5ffc4d9
+   Path: routes/likeProductReviews.ts, line 35
+   Info: Unsanitized input from the HTTP request body flows into update, where it is used in an NoSQL query. This may result in an NoSQL Injection vulnerability.
+
+ ✗ [HIGH] NoSQL Injection
+   Finding ID: 67985e70-a476-466b-a425-b0930a02e996
+   Path: routes/likeProductReviews.ts, line 43
+   Info: Unsanitized input from the HTTP request body flows into findOne, where it is used in an NoSQL query. This may result in an NoSQL Injection vulnerability.
+
+ ✗ [HIGH] NoSQL Injection
+   Finding ID: e69415b6-1057-4c47-9920-d9e16e141e12
+   Path: routes/likeProductReviews.ts, line 25
+   Info: Unsanitized input from the HTTP request body flows into findOne, where it is used in an NoSQL query. This may result in an NoSQL Injection vulnerability.
+
+ ✗ [HIGH] Hardcoded Secret
+   Finding ID: 78404d96-4d05-415b-a246-4f1702207913
+   Path: lib/insecurity.ts, line 44
+   Info: Hardcoded value is used as a cipher key (in node:crypto.default.createHmac). Generate the value with a cryptographically strong random number generator and do not hardcode it in source code.
+
+ ✗ [HIGH] Hardcoded Secret
+   Finding ID: 88ffa15f-4270-4729-b4a8-ece1c78023e2
+   Path: lib/insecurity.ts, line 23
+   Info: Hardcoded value is used as a cipher key (in node:crypto.default.createHmac). Generate the value with a cryptographically strong random number generator and do not hardcode it in source code.
+
+ ✗ [HIGH] SQL Injection
+   Finding ID: fb1553bb-1d69-427e-a21a-2bb381d8b209
+   Path: data/static/codefixes/dbSchemaChallenge_1.ts, line 5
+   Info: Unsanitized input from an HTTP parameter flows into query, where it is used in an SQL query. This may result in an SQL Injection vulnerability.
+
+ ✗ [HIGH] Path Traversal
+   Finding ID: cf92638f-249e-4427-939f-4e74bb9b5fce
+   Path: routes/quarantineServer.ts, line 14
+   Info: Unsanitized input from an HTTP parameter flows into sendFile, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [HIGH] SQL Injection
+   Finding ID: a847e7c2-738c-4394-b539-c002f980ebbb
+   Path: data/static/codefixes/unionSqlInjectionChallenge_3.ts, line 10
+   Info: Unsanitized input from an HTTP parameter flows into query, where it is used in an SQL query. This may result in an SQL Injection vulnerability.
+
+ ✗ [HIGH] Hardcoded Non-Cryptographic Secret
+   Finding ID: f543598d-0457-4094-b882-717a0f81829b
+   Path: lib/insecurity.ts, line 54
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in express-jwt.default.
+
+ ✗ [HIGH] Path Traversal
+   Finding ID: 93329f79-bbc0-40ac-b75a-79fa151b7d1a
+   Path: routes/logfileServer.ts, line 14
+   Info: Unsanitized input from an HTTP parameter flows into sendFile, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [HIGH] Hardcoded Non-Cryptographic Secret
+   Finding ID: 37094346-ab8e-4340-89bf-355a535b3294
+   Path: frontend/src/app/last-login-ip/last-login-ip.component.spec.ts, line 61
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [HIGH] Path Traversal
+   Finding ID: f1b12a0d-e990-4668-ac89-76dcd56e1a15
+   Path: routes/keyServer.ts, line 14
+   Info: Unsanitized input from an HTTP parameter flows into sendFile, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [HIGH] Path Traversal
+   Finding ID: be07790d-6697-47e7-af8b-d5adcfe89f05
+   Path: routes/fileServer.ts, line 33
+   Info: Unsanitized input from an HTTP parameter flows into sendFile, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.
+
+ ✗ [HIGH] SQL Injection
+   Finding ID: 08f3b692-fe9a-4aad-9308-a752ff51e874
+   Path: routes/login.ts, line 34
+   Info: Unsanitized input from the HTTP request body flows into query, where it is used in an SQL query. This may result in an SQL Injection vulnerability.
+
+ ✗ [HIGH] Server-Side Request Forgery (SSRF)
+   Finding ID: 318d30ee-8821-4c86-9ff4-8e5641144b44
+   Path: routes/profileImageUrlUpload.ts, line 24
+   Info: Unsanitized input from the HTTP request body flows into fetch, where it is used as an URL to perform a request. This may result in a Server-Side Request Forgery vulnerability.
+
+ ✗ [HIGH] Cross-site Scripting (XSS)
+   Finding ID: def9af90-ab66-46b3-bab0-2091a5b1389c
+   Path: routes/userProfile.ts, line 98
+   Info: Unsanitized input from cookies flows into send, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).
+
+ ✗ [HIGH] Cross-site Scripting (XSS)
+   Finding ID: 83a2bb4e-47e4-47bd-8408-f6c4bdbdcb8a
+   Path: routes/recycles.ts, line 17
+   Info: Unsanitized input from an HTTP parameter flows into send, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).
+
+ ✗ [HIGH] Cross-site Scripting (XSS)
+   Finding ID: 9472adfa-e42e-492f-9069-7f3d18161b41
+   Path: frontend/src/app/track-result/track-result.component.ts, line 48
+   Info: Unsanitized input from an HTTP parameter flows into bypassSecurityTrustHtml, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).
+
+ ✗ [HIGH] Cross-site Scripting (XSS)
+   Finding ID: bf482d92-dbf1-4dc5-ae58-75b5993bb64e
+   Path: frontend/src/app/search-result/search-result.component.ts, line 171
+   Info: Unsanitized input from an HTTP parameter flows into bypassSecurityTrustHtml, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).
+
+ ✗ [HIGH] Hardcoded Secret
+   Finding ID: 1d02b45e-ba8a-471b-b4b1-4e2bc69388af
+   Path: lib/insecurity.ts, line 22
+   Info: Hardcoded value is used as a cipher key (in jsonwebtoken.default.verify). Generate the value with a cryptographically strong random number generator and do not hardcode it in source code.
+
+
+
+╭──────────────────────────────────────────────────────────╮
+│ Test Summary                                             │
+│                                                          │
+│   Organization:                                          │
+│   Test type:         Static code analysis                │
+│   Project path:      /home/mira/siem/juice-shop          │
+│                                                          │
+│   Total issues:   267                                    │
+│   Ignored issues: 0 [ 0 HIGH  0 MEDIUM  0 LOW ]          │
+│   Open issues:    267 [ 27 HIGH  20 MEDIUM  220 LOW ]    │
+╰──────────────────────────────────────────────────────────╯
+    
+💡 Tip
+
+   To view ignored issues, use the --include-ignores option.
+                                                            
+
