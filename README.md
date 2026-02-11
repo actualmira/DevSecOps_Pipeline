@@ -96,7 +96,7 @@ Password: [33]
 The application accepted this payload and logged me into Admin account successfully without requiring valid credentials, demonstrating a critical authentication bypass vulnerability.
 project_screenshots/phase1/Screenshot 2025-11-26 130646.png
 
-![Admin Access](project_screenshots/phase1/Screenshot%2025-11-26%130646.png)
+![Admin Access](project_screenshots/phase1/Screenshot%202025-11-26%20130646.png)
 *Successful authentication bypass - gained admin access without valid credentials*
 
 The root cause is **trusting user input without validation**. The application takes whatever the user types and directly inserts it into a SQL query. It treats user input as code.
@@ -140,13 +140,13 @@ I injected malicious JavaScript into the search input to demonstrate how arbitra
 ```html
 <script>alert('mira xss')</script>
 ```
-![XSS Script Tag Blocked](project_screenshots/phase1/Screenshot%2025-11-26%131838.png)
+![XSS Script Tag Blocked](project_screenshots/phase1/Screenshot%202025-11-26%20131838.png)
 
 **I succeeded on the second attempt**: This worked and JavaScript was executed, displaying an alert box.
 ```html
 <img src=x onerror=alert(1)>
 ```
-![XSS Image Tag Success](project_screenshots/phase1/Screenshot%2025-11-26%132556.png)
+![XSS Image Tag Success](project_screenshots/phase1/Screenshot%202025-11-26%20132556.png)
 
 Angular has built-in Content Security Policy (CSP) protection that blocks inline `<script>` tags by default. `<img>` tag is a valid HTML element so CSP doesn't block it, src=x is invalid, image fails to load, **onerror event handler triggers** and **JavaScript in onerror is executed**
 
