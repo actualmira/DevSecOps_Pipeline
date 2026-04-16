@@ -1,4 +1,4 @@
-# DevSecOps Security Pipeline (Shift-Left Security)
+# DevSecOps: Integrating Automated Security Scanning in CI/CD (Shift-Left Security)
 
 A comprehensive DevSecOps implementation demonstrating automated security testing (SAST, SCA, Container) integrated into CI/CD pipelines, and DAST
 
